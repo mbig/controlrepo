@@ -1,4 +1,3 @@
 ---
 classes:
-  - graylog::allinone:
-  - graylog::allinone:
+  - graylog::allinone
