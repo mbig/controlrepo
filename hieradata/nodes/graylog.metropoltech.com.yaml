@@ -1,3 +1,8 @@
 ---
 classes:
   - graylog::server
+      config:
+        password_secret: "#@theD00r"
+        root_password_sha2: "#@theD00r"
+        web_enable: "true"
+
