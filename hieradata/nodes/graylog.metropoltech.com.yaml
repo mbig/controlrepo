@@ -1,3 +1,4 @@
 ---
 classes:
-  - graylog::allinone
+  - graylog::allinone::elasticsearch:
+  - graylog::allinone::graylog:
