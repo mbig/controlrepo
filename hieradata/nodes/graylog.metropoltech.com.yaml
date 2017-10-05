@@ -1,5 +1,4 @@
 ---
 classes:
-  - ntp:: 
-  - graylog::allinone::elasticsearch:
-  - graylog::allinone::graylog:
+  - graylog::allinone:
+  - graylog::allinone:
