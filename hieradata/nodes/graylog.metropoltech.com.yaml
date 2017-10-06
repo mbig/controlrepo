@@ -1,9 +1,31 @@
 ---
 classes:
+class { 'mongodb::globals':
+  manage_package_repo => true,
+}->
+class { 'mongodb::server':
+  bind_ip => ['192.168.1.164'],
+}
 
-graylog::server
-   config:
-     password_secret: "#@theD00r"
-     root_password_sha2: "#@theD00r"
-     web_enable: "true"
+class { 'elasticsearch':
+  version      => '5.5.1',
+  repo_version => '5.x',
+  manage_repo  => true,
+}->
+elasticsearch::instance { 'graylog':
+  config => {
+    'cluster.name' => 'graylog',
+    'network.host' => '192.168.1.164',
+  }
+}
 
+class { 'graylog::repository':
+  version => '2.3'
+}->
+class { 'graylog::server':
+  package_version => '2.3.0-7',
+  config          => {
+    'password_secret' => '#@theD00r',    # Fill in your password secret
+    'root_password_sha2' => '#@theD00r', # Fill in your root password hash
+  }
+}
