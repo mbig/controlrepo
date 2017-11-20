@@ -1,6 +1,7 @@
 ---
 classes:
  - 'profile::apache'
+ - 'profile::base'
 
 resolv_conf::nameservers:
   - 192.168.1.1
