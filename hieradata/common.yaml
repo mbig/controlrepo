@@ -7,4 +7,4 @@ resolv_conf::nameservers:
   - 192.168.1.1
   - 127.0.0.1
 profile::dnsmasq::params::domain: "metropoltech.com"
-profile::dnsmasq::params::port: '53'
+profile::dnsmasq::params::port: 53
