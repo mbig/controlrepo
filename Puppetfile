@@ -90,3 +90,6 @@ mod 'thias-sysctl', '1.0.6'
 
 # Cybraics modules
 mod 'puppet-cybraics'
+
+#dnsmasq 
+mod 'saz-dnsmasq', '1.3.1'
