@@ -6,16 +6,3 @@ classes:
 resolv_conf::nameservers:
   - 192.168.1.1
   - 127.0.0.1
-profile::dnsmasq::params::enabled: true
-profile::dnsmasq::params::cleanup: false
-profile::dnsmasq::params::bogus_priv: false
-profile::dnsmasq::params::cache_size: 1000
-profile::dnsmasq::params::domain: "%{facts.networking.domain}"
-profile::dnsmasq::params::domain_needed: false
-profile::dnsmasq::params::enable_tftp: false
-profile::dnsmasq::params::expand_hosts: true
-profile::dnsmasq::params::listen_address: '127.0.0.1'
-profile::dnsmasq::params::no_hosts: false
-profile::dnsmasq::params::no_negcache: false
-profile::dnsmasq::params::resolv_file: '/etc/resolv.conf'
-profile::dnsmasq::params::restart: true
