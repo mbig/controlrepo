@@ -20,3 +20,7 @@ profile::dnsmasq::params::no_negcache: false
 profile::dnsmasq::params::resolv_file: '/etc/resolv.conf'
 profile::dnsmasq::params::restart: true
 profile::dnsmasq::params::interface: 'eth0'
+
+graylog::allinone::graylog:
+graylog::allinone::elasticsearch:
+
