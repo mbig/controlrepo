@@ -26,3 +26,6 @@ graylog::allinone::graylog:
 graylog::allinone::elasticsearch:
                         version: '2.3.2'
 
+graylog::server::config:
+              password_secret: '#@theD00r'
+              root_password_sha2: '525deabc3a96eb777328496d2c20c1939b473f6b2b3a5dd551a879ff1e47d264'
