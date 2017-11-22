@@ -22,5 +22,7 @@ profile::dnsmasq::params::restart: true
 profile::dnsmasq::params::interface: 'eth0'
 
 graylog::allinone::graylog:
+                     major_version: '2.0'
 graylog::allinone::elasticsearch:
+                        version: '2.3.2'
 
