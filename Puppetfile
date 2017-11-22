@@ -92,3 +92,4 @@ mod 'thias-sysctl', '1.0.6'
 mod 'puppet-cybraics'
 #dnsmasq
 mod 'lex-dnsmasq', '2.6.1'
+
