@@ -29,3 +29,6 @@ graylog::allinone::elasticsearch:
 graylog::server::config:
               password_secret: '#@theD00r'
               root_password_sha2: '525deabc3a96eb777328496d2c20c1939b473f6b2b3a5dd551a879ff1e47d264'
+postgresql::globals::manage_package_repo: true
+postgresql::globals::repo_baseurl: 'https://yum.postgresql.org/9.2/redhat/rhel-6-x86_64/'
+
