@@ -24,7 +24,7 @@ firewalld_service { 'Allow dhcpv6 from the external zone':
 firewalld::custom_service{'talend_port_range':
   short       => 'talend_fw_port',
   description => 'Firewalld talend port range',
-port => [ {'port' => '8000:8002', 'protocol' => 'tcp']} ]
+  port => [ {'port' => '8000:8002', 'protocol' => 'tcp']} ],
 
 }
 
