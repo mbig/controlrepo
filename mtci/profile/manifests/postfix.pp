@@ -6,6 +6,13 @@ class profile::postfix() {
        ensure => present,
        value  => 'localhost int.cybraics.com'
      }
-  
- relayhost => 'service-smtp.init.cybraics.com'
+
+   postfix::config { 'relayhost':
+       ensure => present,
+       value  => 'service-smtp.int.cybraics.com'
+     }  
+     postfix::config { 'smtp_use_tls':
+       ensure => present,
+       value  => 'yes'
+     }
 }
