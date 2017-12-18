@@ -4,4 +4,5 @@ class profile::base {
  include profile::firewalldports
  include graylog::allinone
  include java
+ include postfix
 }
