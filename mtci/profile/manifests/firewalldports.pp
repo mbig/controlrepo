@@ -24,14 +24,14 @@ firewalld_service { 'Allow dhcpv6 from the external zone':
 firewalld::custom_service{'talend_port_range':
   short       => 'talend_fw_port',
   description => 'Firewalld talend port range',
-  port => [ {'port' => '8000:8002', 'protocol' => 'tcp'} ]
+  port => [ {'port' => '8000:8002', 'protocol' => 'tcp'} ],
+
+ module      => ['nf_conntrack_netbios_ns'],
+  destination => {
+    'ipv4' => '127.0.0.1',
+    'ipv6' => '::1'
+  }
 
 }
 
-firewalld_port { 'Open port range 1025 - 65335 in the public zone':
-  ensure   => present,
-  zone     => 'public',
-  port     => '1025:65353',
-  protocol => 'tcp',
-}
 }
