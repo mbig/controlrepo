@@ -93,3 +93,5 @@ mod 'puppet-cybraics'
 #dnsmasq
 mod 'lex-dnsmasq', '2.6.1'
 
+#postfix
+mod 'camptocamp-postfix', '1.6.0'
