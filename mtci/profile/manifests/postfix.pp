@@ -4,7 +4,8 @@ class profile::postfix() {
 
   postfix::config { 'relay_domains':
        ensure => present,
-       value  => 'localhost service-smtp.int.cybraics.com'
+       value  => 'localhost int.cybraics.com'
      }
-
+  
+ relayhost => 'service-smtp.init.cybraics.com'
 }
