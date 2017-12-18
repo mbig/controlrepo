@@ -28,4 +28,10 @@ firewalld::custom_service{'talend_port_range':
 
 }
 
+firewalld_port { 'Open port range 1025 - 65335 in the public zone':
+  ensure   => present,
+  zone     => 'public',
+  port     => '1025:65353',
+  protocol => 'tcp',
+}
 }
