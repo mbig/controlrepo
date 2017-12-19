@@ -14,7 +14,7 @@ class profile::install_postfix() {
 
    postfix::config { 'smtp_listen':
        ensure => present,
-       value  => '0.0.0.0'
+       value  => 'all'
      }
 
   
