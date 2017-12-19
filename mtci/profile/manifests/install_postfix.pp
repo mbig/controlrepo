@@ -18,7 +18,7 @@ class profile::install_postfix() {
      }
 
   
-     postfix::config { 'myhostname':
+     postfix::config { 'myorigin':
        ensure => present,
        value  => 'service-smtp.int.cybraics.com'
      } 
