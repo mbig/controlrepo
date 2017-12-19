@@ -29,5 +29,11 @@ class profile::install_postfix() {
        value  => 'localhost.$mydomain, $mydomain'
      }
 
+           postfix::config { 'mynetworks':
+       ensure => present,
+       value  => '10.200.5.0/24, 10.2.0.0/24, 10.55.20.0/24, 10.2.4.0/24'
+     }
+
+
 }
  
