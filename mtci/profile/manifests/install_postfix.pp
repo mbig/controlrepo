@@ -24,9 +24,9 @@ class profile::install_postfix() {
      } 
 
 
-        postfix::config { 'myorigin':
+        postfix::config { 'mydestination':
        ensure => present,
-       value  => 'cybraics.com'
+       value  => ' $myhostname, localhost.$mydomain, localhost, $mydomain'
      }
 
 }
