@@ -1,7 +1,6 @@
 class profile::install_postfix() {
   include postfix
 
- master_submission => 'submission inet n - n - - smtpd'
   postfix::config { 'relay_domains':
        ensure => present,
        value  => 'localhost cybraics.com'
