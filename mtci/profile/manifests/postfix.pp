@@ -1,5 +1,5 @@
 class profile::postfix() {
-
+  include postfix
 
  class { 'postfix':
 
