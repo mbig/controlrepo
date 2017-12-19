@@ -36,9 +36,9 @@ class profile::install_postfix() {
   'smtp_tls_session_cache_database':  value   => 'btree:${data_directory}/smtp_tls_session_cache';
     }
 
-     postfix::config { 'master_smtp':
+     postfix::config { 'master_submission':
        ensure => present,
-       value  => 'smtp inet n - n - - smtpd'
+       value  => 'submission inet n - n - - smtpd'
      }
 
 }
