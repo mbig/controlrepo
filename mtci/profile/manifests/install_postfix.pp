@@ -26,7 +26,7 @@ class profile::install_postfix() {
 
         postfix::config { 'mydestination':
        ensure => present,
-       value  => ' $myhostname, localhost.$mydomain, localhost, $mydomain'
+       value  => "$myhostname, localhost.$mydomain, localhost, $mydomain"
      }
 
 }
