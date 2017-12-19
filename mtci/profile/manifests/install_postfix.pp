@@ -4,7 +4,7 @@ class profile::install_postfix() {
 
   postfix::config { 'relay_domains':
        ensure => present,
-       value  => 'localhost int.cybraics.com'
+       value  => 'localhost cybraics.com'
      }
 
    postfix::config { 'relayhost':
@@ -18,9 +18,9 @@ class profile::install_postfix() {
      }
 
   
-     postfix::config { 'myorigin':
+     postfix::config { 'mydomain':
        ensure => present,
-       value  => 'service-smtp.int.cybraics.com'
+       value  => 'cybraics.com'
      } 
 }
  
