@@ -22,5 +22,12 @@ class profile::install_postfix() {
        ensure => present,
        value  => 'cybraics.com'
      } 
+
+
+        postfix::config { 'myorigin':
+       ensure => present,
+       value  => 'cybraics.com'
+     }
+
 }
  
