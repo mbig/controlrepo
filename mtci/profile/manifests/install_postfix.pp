@@ -1,9 +1,6 @@
 class profile::install_postfix() {
   include postfix
 
-      class { 'postfix':
-     smtp_listen => '0.0.0.0',
-   }
 
   postfix::config { 'relay_domains':
        ensure => present,
