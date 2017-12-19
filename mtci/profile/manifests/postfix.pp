@@ -1,5 +1,9 @@
 class profile::postfix() {
- include postfix
+
+
+ class { 'postfix':
+      relayhost => 'service-smtp.int.cybraics.com',
+ }
 
   postfix::config { 'relay_domains':
        ensure => present,
