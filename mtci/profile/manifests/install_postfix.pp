@@ -12,12 +12,6 @@ class profile::install_postfix() {
        value  => 'service-smtp.int.cybraics.com'
      }  
 
-   postfix::config { 'smtp_listen':
-       ensure => present,
-       value  => 'all'
-     }
-
-  
      postfix::config { 'mydomain':
        ensure => present,
        value  => 'cybraics.com'
