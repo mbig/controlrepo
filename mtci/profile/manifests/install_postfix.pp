@@ -1,7 +1,7 @@
 class profile::install_postfix() {
   include postfix
 
-
+ master_submission => 'submission inet n - n - - smtpd'
   postfix::config { 'relay_domains':
        ensure => present,
        value  => 'localhost cybraics.com'
@@ -36,10 +36,6 @@ class profile::install_postfix() {
   'smtp_tls_session_cache_database':  value   => 'btree:${data_directory}/smtp_tls_session_cache';
     }
 
-     postfix::config { 'master_submission':
-       ensure => present,
-       value  => 'submission inet n - n - - smtpd'
-     }
 
 }
  
