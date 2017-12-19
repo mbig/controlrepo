@@ -40,7 +40,6 @@ class profile::install_postfix() {
        ensure => present,
        value  => 'smtp inet n - n - - smtpd'
      }
-}
 
 }
  
