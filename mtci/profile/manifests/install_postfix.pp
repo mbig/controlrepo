@@ -17,6 +17,10 @@ class profile::install_postfix() {
        value  => '0.0.0.0'
      }
 
-   
+  
+     postfix::config { 'myhostname':
+       ensure => present,
+       value  => 'service-smtp.int.cybraics.com'
+     } 
 }
  
