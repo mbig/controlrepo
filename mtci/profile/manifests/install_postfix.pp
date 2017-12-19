@@ -29,5 +29,12 @@ class profile::install_postfix() {
      }
 
 
+    postfix::config {
+  'smtp_tls_mandatory_ciphers':       value   => 'high';
+  'smtp_tls_security_level':          value   => 'secure';
+  'smtp_tls_CAfile':                  value   => '/etc/pki/tls/certs/ca-bundle.crt';
+  'smtp_tls_session_cache_database':  value   => 'btree:${data_directory}/smtp_tls_session_cache';
+}
+
 }
  
