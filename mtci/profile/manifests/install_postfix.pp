@@ -19,7 +19,7 @@ class profile::install_postfix() {
 
         postfix::config { 'mydestination':
        ensure => present,
-       value  => 'localhost.$mydomain, $mydomain'
+       value  => 'localhost.$mydomain, $mydomain, gmail.com'
      }
 
            postfix::config { 'mynetworks':
