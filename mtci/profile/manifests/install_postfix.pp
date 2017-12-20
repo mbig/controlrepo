@@ -8,7 +8,7 @@ class profile::install_postfix() {
 
    postfix::config { 'relayhost':
        ensure => present,
-       value  => 'service-smtp.int.cybraics.com'
+       value  => 'kubenode02.metropoltech.com'
      }  
 
      postfix::config { 'mydomain':
