@@ -3,7 +3,7 @@ class profile::install_postfix() {
 
   postfix::config { 'relay_domains':
        ensure => present,
-       value  => 'localhost cybraics.com'
+       value  => 'localhost cybraics.com gmail.com'
      }
 
    postfix::config { 'relayhost':
